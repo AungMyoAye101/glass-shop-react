@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <section>
-      <Link to={"/"} className="text-red-300">
-        Home
-      </Link>
+      <NavBar />
     </section>
   );
 }
