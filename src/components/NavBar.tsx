@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center px-6 py-3 border-b shadow-md">
+    <nav className="flex justify-between items-center px-6 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50">
       <div>
-        <h1 className="text-4xl font-bold font-heading">Ecommerce</h1>
+        <h1 className="text-3xl font-bold font-heading">Ecommerce</h1>
       </div>
       <div>
         <Link to="/" className="head-link ">
           Home
         </Link>
-        <Link to="/" className="head-link ">
+        <Link to="/shop" className="head-link ">
           Shop
         </Link>
         <Link to="/" className="head-link">
@@ -22,7 +22,7 @@ const NavBar = () => {
       </div>
       <div className="flex items-center gap-2">
         <div>Cart</div>
-        <button className="text-lg px-4 py-1 rounded-full shadow-md bg-purple-200">
+        <button className="text-lg px-4 py-1 rounded-full font-body shadow-md bg-purple-200">
           Sign Up
         </button>
       </div>
