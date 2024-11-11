@@ -1,5 +1,5 @@
 import model from "../assets/model.png";
-
+const url = "https://fakestoreapi.com/products";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-between gap-10 px-12">
