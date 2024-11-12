@@ -12,3 +12,14 @@ export const getProduct = () => {
     });
   return productData;
 };
+export const getProductDetail = (id: string) => {
+  const productData = axios
+    .get(url + "/" + id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  return productData;
+};
