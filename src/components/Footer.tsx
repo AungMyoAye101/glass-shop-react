@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <section className="px-12 py-4 rounded  border border-gray-800 space-y-2">
-      <div className="  flex justify-between ">
+      <div className="  flex flex-wrap gap-6  items-center justify-center  md:justify-between ">
         <div>
           <h1 className="text-2xl font-heading ">Ecommerce</h1>
         </div>
