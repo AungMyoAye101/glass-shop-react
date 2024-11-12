@@ -4,15 +4,21 @@ import Card from "./Card";
 
 const ProductGrid = () => {
   const [product, setProduct] = useState([]);
+
+  const productData = async () => {
+    const res = await getProduct();
+    setProduct(res);
+  };
   useEffect(() => {
-    const res = getProduct();
-    console.log(res, res);
+    productData();
   }, []);
 
   console.log(product);
   return (
     <section>
-      <Card />
+      {product.map((p) => (
+        <Card />
+      ))}
     </section>
   );
 };
