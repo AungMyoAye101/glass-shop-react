@@ -1,3 +1,4 @@
+import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export interface CardProp {
@@ -19,7 +20,10 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
           {title}
         </h1>
         <div className="flex justify-between items-center py-2 font-body">
-          <p className="text-sm">{rating} </p>
+          <div className="flex items-center gap-1 ">
+            <span>{rating}</span>
+            <FaStar className="text-yellow-500" />
+          </div>
           <p className="text-base text-yellow-500 drop-shadow">{price} $</p>
         </div>
       </div>
