@@ -15,9 +15,9 @@ const ProductGrid = () => {
 
   console.log(product);
   return (
-    <section>
-      {product.map((p) => (
-        <Card />
+    <section className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+      {product.map((p: any) => (
+        <Card key={p.id} title={p.title} image={p.image} />
       ))}
     </section>
   );
