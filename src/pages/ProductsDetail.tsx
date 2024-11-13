@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductDetail } from "../components/Api";
 import { FaLocationDot, FaStar } from "react-icons/fa6";
+import RelatedProduct from "../components/RelatedProduct";
 interface ProductProp {
   id: number;
   title: string;
@@ -32,12 +33,10 @@ const ProductsDetail = () => {
     productData();
   }, []);
 
-  console.log(product);
-
   return (
     <section>
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 py-10 px-4 md:px-12  bg-gray-300">
-        <div className="w-full md:w-[30%] h-60 md:h-96 flex items-center justify-center  rounded-md shadow-md overflow-hidden bg-gray-100 p-2">
+        <div className="w-full md:w-[30%] h-60 md:h-96 flex items-center justify-center  rounded-md shadow-md overflow-hidden bg-gray-100 p-4">
           <img
             src={product.image}
             alt="product item picture"
@@ -78,6 +77,7 @@ const ProductsDetail = () => {
           </button>
         </div>
       </div>
+      <RelatedProduct />
     </section>
   );
 };

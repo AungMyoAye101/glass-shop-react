@@ -11,7 +11,7 @@ export interface CardProp {
 
 const Card = ({ id, title, image, price, rating }: CardProp) => {
   return (
-    <div className="group rounded-md shadow-md overflow-hidden p-3 bg-gray-100 relative">
+    <div className="min-w-60 group rounded-md shadow-md overflow-hidden p-3 bg-gray-100 relative">
       <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52 aspect-square rounded-md">
         <img src={image} alt="model" className="w-full h-full rounded-md  " />
       </div>
