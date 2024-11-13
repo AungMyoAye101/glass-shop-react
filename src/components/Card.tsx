@@ -6,25 +6,25 @@ export interface CardProp {
   title: string;
   image: string;
   price: number;
-  rating: number;
+  rating: { rate: number };
 }
 
 const Card = ({ id, title, image, price, rating }: CardProp) => {
   return (
-    <div className="group min-w-40 rounded-md shadow-md overflow-hidden p-3 bg-gray-100 relative">
-      <div className="w-full h-52 aspect-square rounded-md">
+    <div className="group rounded-md shadow-md overflow-hidden p-3 bg-gray-100 relative">
+      <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52 aspect-square rounded-md">
         <img src={image} alt="model" className="w-full h-full rounded-md  " />
       </div>
       <div className="py-2">
-        <h1 className="font-heading font-semibold text-base line-clamp-1">
+        <h1 className="font-heading font-semibold text-sm md:text-base line-clamp-1">
           {title}
         </h1>
-        <div className="flex justify-between items-center py-2 font-body">
+        <div className="flex justify-between items-center  font-body text-sm md:text-base">
           <div className="flex items-center gap-1 ">
-            <span>{rating}</span>
+            <span>{rating.rate}</span>
             <FaStar className="text-yellow-500" />
           </div>
-          <p className="text-base text-yellow-500 drop-shadow">{price} $</p>
+          <p className=" text-yellow-500 drop-shadow">{price} $</p>
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center px-6 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50">
+    <nav className="z-50 flex justify-between items-center px-6 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50 bg-opacity-95 backdrop-blur-sm">
       <div>
         <h1 className="text-3xl font-bold font-heading">Ecommerce</h1>
       </div>
