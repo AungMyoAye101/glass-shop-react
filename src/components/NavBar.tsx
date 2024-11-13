@@ -2,6 +2,25 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
+const navLink = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Shop",
+    path: "/shop",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
+
 const NavBar = () => {
   return (
     <nav className="z-50 flex justify-between items-center px-6 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50 bg-opacity-95 backdrop-blur-sm">
@@ -11,18 +30,12 @@ const NavBar = () => {
         </div>
 
         <div className="hidden md:flex border-l border-gray-600">
-          <Link to="/" className="head-link ">
-            Home
-          </Link>
-          <Link to="/shop" className="head-link ">
-            Shop
-          </Link>
-          <Link to="/about" className="head-link">
-            About
-          </Link>
-          <Link to="/contact" className="head-link">
-            Contact
-          </Link>
+          {navLink.map((item, i) => (
+            <Link to={item.path} className="head-link relative group" key={i}>
+              {item.name}
+              <span className="left-0  bottom-0 h-1 w-0 group-hover:w-full bg-purple-400 rounded  absolute transition-all ease-out duration-500"></span>
+            </Link>
+          ))}
         </div>
       </div>
 

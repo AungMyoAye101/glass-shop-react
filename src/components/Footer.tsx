@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="px-12 py-4 rounded  border border-gray-800 space-y-2">
-      <div className="  flex flex-wrap gap-6  items-center justify-center  md:justify-between ">
+    <section className="px-12 py-4 rounded  bg-gray-700 text-gray-100 space-y-4">
+      <div className="  flex flex-wrap gap-6  justify-center  md:justify-between ">
         <div>
           <h1 className="text-2xl font-heading ">Ecommerce</h1>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="bg-gray-900 rounded-md py-1 ">
+      <div className="bg-gray-800 rounded-md py-1 ">
         <p className="text-center text-gray-100">
           Copyright & allrights reserved.{" "}
           <span className="text-purple-600">Make With Love</span>
