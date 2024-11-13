@@ -1,11 +1,11 @@
-import model from "../assets/model.png";
+import model from "../assets/model-1.png";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-between gap-10 px-12">
+    <section className="min-h-screen relative flex items-center justify-center gap-12 px-12 bg-gradient-to-tr from-purple-400  to-pink-400">
       <div className="flex flex-col gap-6 w-[45%]">
-        <h1 className="text-6xl font-heading font-semibold">Collection</h1>
-        <p className="text-2xl font-heading ">
+        <h1 className="text-6xl font-heading font-bold ">Collection</h1>
+        <p className="text-2xl font-heading font-semibold">
           You can explore and shop many differnt collection from various barands
           here.
         </p>
@@ -14,8 +14,12 @@ const Hero = () => {
         </button>
       </div>
       <div className="">
-        <div>
-          <img src={model} alt="model photo" className="w-80 rounded-md" />
+        <div className="bg-yellow-400 size-96 rounded-full">
+          <img
+            src={model}
+            alt="model photo"
+            className="rounded-md absolute bottom-0 w-96"
+          />
         </div>
       </div>
     </section>
