@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getProductDetail } from "../components/Api";
 import { FaLocationDot, FaStar } from "react-icons/fa6";
 import RelatedProduct from "../components/RelatedProduct";
+import Category from "../components/Category";
 interface ProductProp {
   id: number;
   title: string;
@@ -78,6 +79,7 @@ const ProductsDetail = () => {
         </div>
       </div>
       <RelatedProduct />
+      <Category />
     </section>
   );
 };
