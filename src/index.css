@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .head-link {
-  @apply text-2xl font-semibold px-3 py-1 hover:bg-purple-200 rounded-md font-body;
+  @apply text-xl font-semibold px-3 py-1 hover:bg-purple-200 rounded-md font-body;
 }
