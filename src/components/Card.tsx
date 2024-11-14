@@ -28,7 +28,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
         </div>
       </div>
 
-      <div className="font-body absolute h-0 w-full left-0 right-0 bottom-0 z-20 group-hover:opacity-100 opacity-0 flex group-hover:h-full transition-all ease-out duration-500  flex-col gap-1 justify-center items-center  bg-gray-700 bg-opacity-75">
+      <div className="font-body absolute h-0  top-0 w-full right-0 z-20 group-hover:opacity-100 opacity-0 flex group-hover:h-full transition-all ease-out duration-500  flex-col gap-1 justify-center items-center  bg-gray-700 bg-opacity-75">
         <Link
           to={`/product/${id}`}
           className="  px-4 py-1 rounded-full bg-gray-100"
