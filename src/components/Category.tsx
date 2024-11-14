@@ -14,7 +14,7 @@ const Category = () => {
   }, []);
 
   return (
-    <section className="w-40 rounded-md border p-4  border-gray-400">
+    <section className="min-w-60 rounded-md shadow-md bg-gray-100  p-4 ">
       <h1 className="text-xl font-heading font-semibold mb-2  underline  underline-offset-8">
         Category
       </h1>

@@ -14,9 +14,9 @@ const RelatedProduct = () => {
     productData();
   }, []);
   return (
-    <section className="px-12 py-10  space-y-4">
-      <h1 className="text-2xl font-heading font-semibold ">Related Products</h1>
-      <div className="flex overflow-hidden w-[100vw] gap-4 overflow-x-scroll ">
+    <section className="flex flex-col gap-4">
+      <h1 className="text-xl font-semibold font-heading">Related Product</h1>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         {product.map(({ id, title, image, price, rating }) => (
           <Card
             key={id}

@@ -10,8 +10,10 @@ const ProductsDetail = () => {
   return (
     <section className="px-4 md:px-12">
       <ProductInfo productId={id!} />
-      <RelatedProduct />
-      <Category />
+      <div className="flex gap-4 py-10  ">
+        <Category />
+        <RelatedProduct />
+      </div>
     </section>
   );
 };
