@@ -17,6 +17,7 @@ export interface CartItem extends Product {
 interface CartContextType {
   cartItems: CartItem[];
   addToCart: (product: Product) => void;
+  addQuantity: (product: Product) => void;
   removeFromCart: (productId: number) => void;
   clearCart: () => void;
 }
@@ -24,6 +25,7 @@ interface CartContextType {
 type CartAction =
   | { type: "ADD_TO_CART"; payload: Product }
   | { type: "REMOVE_FROM_CART"; payload: number }
+  | { type: "ADD_QUANTITY"; payload: Product }
   | { type: "CLEAR_CART" };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -46,6 +48,17 @@ const cartReducer = (state: CartItem[], action: CartAction): CartItem[] => {
 
     case "REMOVE_FROM_CART":
       return state.filter((item) => item.id !== action.payload);
+    case "ADD_QUANTITY":
+      const addItems = state.find((item) => item.id === action.payload.id);
+      if (addItems) {
+        return state.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...state, { ...action.payload, quantity: 1 }];
+      }
     case "CLEAR_CART":
       return [];
     default:
@@ -62,12 +75,15 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const removeFromCart = (productID: number) => {
     dispatch({ type: "REMOVE_FROM_CART", payload: productID });
   };
+  const addQuantity = (product: Product) => {
+    dispatch({ type: "ADD_QUANTITY", payload: product });
+  };
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
   };
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart }}
+      value={{ cartItems, addToCart, removeFromCart, addQuantity, clearCart }}
     >
       {children}
     </CartContext.Provider>

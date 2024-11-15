@@ -33,6 +33,8 @@ const NavBar = () => {
     setOpen((pre) => !pre);
   };
 
+  const count = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <>
       <nav className="z-50 flex justify-center items-center gap-4 md:justify-between px-4 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50 bg-opacity-95 backdrop-blur-sm">
@@ -84,7 +86,7 @@ const NavBar = () => {
             <IoCartOutline className="text-xl" />
             {cartItems.length > 0 && (
               <div className="size-4 rounded-full text-sm font-body bg-rose-600 text-gray-100 flex justify-center items-center absolute -bottom-1 -right-1 ">
-                {cartItems.length}
+                {count}
               </div>
             )}
           </div>
