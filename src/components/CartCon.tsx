@@ -1,20 +1,19 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaTrashCan, FaX } from "react-icons/fa6";
 
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
+import { cart } from "./Api";
 
 interface CartProp {
   clickHandle: () => void;
 }
-interface Cart {
-  id: number;
-  title: string;
-  image: string;
-}
-export const cart: Cart[] = [];
 
 const CartCon: FC<CartProp> = ({ clickHandle }) => {
-  console.log(cart);
+  const [cartItems, setcartItems] = useState(cart);
+  useEffect(() => {
+    setcartItems(cart);
+  }, [cart]);
+
   return (
     <section className=" w-60 h-screen  z-50 fixed right-0 top-0 rounded-md bg-gray-100 px-4 py-6">
       <button onClick={clickHandle}>
@@ -28,7 +27,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
         <div className="h-[1px] w-full bg-gray-800 rounded"></div>
         {cart.length > 0 && (
           <div className="flex flex-col gap-3 ">
-            {cart.map((item) => (
+            {cartItems.map((item) => (
               <div className="flex gap-2 justify-between items-center bg-gray-100 shadow-md rounded-md py-1 px-2">
                 <img
                   src={item.image}
@@ -38,11 +37,11 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
                 <div className="flex flex-col items-center">
                   <h2 className="text-sm line-clamp-1">{item.title}</h2>
                   <div className="flex gap-2  ">
-                    <button>
+                    <button onClick={() => item.quantity + 1}>
                       <FaPlusCircle />
                     </button>
-                    <span>2</span>
-                    <button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => item.quantity - 1}>
                       <FaMinusCircle />
                     </button>
                   </div>

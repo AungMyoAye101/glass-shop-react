@@ -1,6 +1,6 @@
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { cart } from "./CartCon";
+import { cart } from "./Api";
 
 export interface CardProp {
   id: number;
@@ -16,6 +16,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
       id,
       title,
       image,
+      quantity: 1,
     });
     console.log("click ");
   };

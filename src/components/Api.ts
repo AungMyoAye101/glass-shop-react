@@ -23,3 +23,11 @@ export const getProductDetail = (id: string) => {
     });
   return productData;
 };
+
+interface Cart {
+  id: number;
+  title: string;
+  image: string;
+  quantity: number;
+}
+export const cart: Cart[] = [];
