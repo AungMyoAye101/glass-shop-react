@@ -3,7 +3,8 @@ import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import CartCon from "./CartCon";
 import { useState } from "react";
-import { cart } from "./Api";
+
+import { useCart } from "./CartProvider";
 
 const navLink = [
   {
@@ -25,6 +26,7 @@ const navLink = [
 ];
 
 const NavBar = () => {
+  const { cartItems } = useCart();
   const [open, setOpen] = useState(false);
 
   const clickHandle = () => {
@@ -80,9 +82,9 @@ const NavBar = () => {
 
           <div className="relative cursor-pointer" onClick={clickHandle}>
             <IoCartOutline className="text-xl" />
-            {cart.length > 0 && (
+            {cartItems.length > 0 && (
               <div className="size-4 rounded-full text-sm font-body bg-rose-600 text-gray-100 flex justify-center items-center absolute -bottom-1 -right-1 ">
-                {cart.length}
+                {cartItems.length}
               </div>
             )}
           </div>

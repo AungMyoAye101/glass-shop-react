@@ -1,6 +1,8 @@
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { cart } from "./Api";
+
+import { useCart } from "./CartProvider";
+import { Product } from "./CartProvider";
 
 export interface CardProp {
   id: number;
@@ -11,15 +13,8 @@ export interface CardProp {
 }
 
 const Card = ({ id, title, image, price, rating }: CardProp) => {
-  const addToCart = () => {
-    cart.push({
-      id,
-      title,
-      image,
-      quantity: 1,
-    });
-    console.log("click ");
-  };
+  const { addToCart } = useCart();
+  const product: Product = { id, title, image, price };
   return (
     <div className="min-w-20 group rounded-md shadow-md overflow-hidden p-3 bg-gray-100 relative">
       <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52 aspect-square rounded-md">
@@ -48,7 +43,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
         <span className="text-lg font-semibold text-gray-100">OR</span>
         <button
           className="  px-4 py-1 rounded-full bg-yellow-500"
-          onClick={addToCart}
+          onClick={() => addToCart(product)}
         >
           Add to Cart
         </button>
