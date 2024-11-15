@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { FaTrashCan, FaX } from "react-icons/fa6";
 
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
@@ -20,7 +20,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
 
       <main className="flex flex-col gap-2">
         <h1 className="text-xl font-semibold text-yellow-500 ">
-          Your Cart items <span>{cart.length}</span>
+          Cart items <span className="text-gray-800">( {cart.length} )</span>
         </h1>
         <div className="h-[1px] w-full bg-gray-800 rounded"></div>
 
@@ -34,7 +34,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
               />
               <div className="flex flex-col items-center">
                 <h2 className="text-sm line-clamp-1">{item.title}</h2>
-                <div className="flex gap-2  ">
+                <div className="flex gap-2 items-center ">
                   <button onClick={() => item.quantity + 1}>
                     <FaPlusCircle />
                   </button>
@@ -50,6 +50,18 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
             </div>
           ))}
         </div>
+
+        {cartItems.length > 0 ? (
+          <>
+            <div className="h-[1px] w-full bg-gray-800 rounded"></div>
+
+            <button className="text-red-500" onClick={clearCart}>
+              Clear all items
+            </button>
+          </>
+        ) : (
+          <p className="text-lg font-body">Your cart is empty</p>
+        )}
       </main>
     </section>
   );
