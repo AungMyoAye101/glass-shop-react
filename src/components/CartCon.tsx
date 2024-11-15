@@ -10,7 +10,8 @@ interface CartProp {
 }
 
 const CartCon: FC<CartProp> = ({ clickHandle }) => {
-  const { cartItems, removeFromCart, addQuantity, clearCart } = useCart();
+  const { cartItems, removeFromCart, addQuantity, minusQuantity, clearCart } =
+    useCart();
 
   const count = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -41,7 +42,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
                     <FaPlusCircle />
                   </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => item.quantity - 1}>
+                  <button onClick={() => minusQuantity(item)}>
                     <FaMinusCircle />
                   </button>
                 </div>
