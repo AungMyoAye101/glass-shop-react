@@ -2,7 +2,7 @@ import model from "../assets/model-1.png";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen relative flex items-center justify-center gap-12 px-12 bg-gradient-to-tr from-purple-400  to-pink-400">
+    <section className="min-h-screen relative flex items-center justify-center gap-12 px-12 bg-gradient-to-tr from-purple-400  to-purple-800">
       <div className="flex flex-col gap-6 -full md:w-[45%]">
         <h1 className="text-6xl font-heading font-bold ">Collection</h1>
         <p className="text-2xl font-heading font-semibold">

@@ -66,9 +66,13 @@ const ProductInfo = ({ productId }: { productId: string }) => {
             Deliver to Myanmar
           </span>
         </div>
-        <button className="rounded-md py-1 px-4  font-heading  shadow-md border border-gray-500">
-          Add Cupon Code
-        </button>
+        <select
+          className="rounded-md py-1 px-4 font-body shadow-md border border-gray-500 "
+          aria-placeholder="Add cupon card"
+        >
+          <option value="10">10 % welcome discount</option>
+          <option value="5">5 % super sales</option>
+        </select>
         <div className="h-[1px] bg-gray-500 w-full"></div>
         <button
           className="rounded-md py-1 px-4  font-heading  shadow-md border border-yellow-500 bg-yellow-400"

@@ -12,7 +12,7 @@ const ProductsDetail = () => {
       <ProductInfo productId={id!} />
       <div className="flex gap-4 py-10  ">
         <Category />
-        <RelatedProduct />
+        <RelatedProduct productType="Related Products" />
       </div>
     </section>
   );
