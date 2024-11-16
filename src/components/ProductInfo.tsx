@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProductDetail } from "./Api";
 import { FaLocationDot, FaStar } from "react-icons/fa6";
+import { useCart } from "./CartProvider";
 
 interface ProductProp {
   id: number;
@@ -9,7 +10,7 @@ interface ProductProp {
   category: string;
   description: string;
   price: number;
-  rating: { rate: number };
+  rating: { rate: number; count: 0 };
 }
 
 const ProductInfo = ({ productId }: { productId: string }) => {
@@ -20,8 +21,10 @@ const ProductInfo = ({ productId }: { productId: string }) => {
     category: "",
     description: "",
     price: 0,
-    rating: { rate: 0 },
+    rating: { rate: 0, count: 0 },
   });
+
+  const { addToCart } = useCart();
 
   const productData = async () => {
     const res = await getProductDetail(productId);
@@ -49,10 +52,11 @@ const ProductInfo = ({ productId }: { productId: string }) => {
             <span>Rating - {product.rating.rate}</span>
             <FaStar className="text-yellow-500" />
           </div>
-          <span className="font-body text-yellow-600 font-semibold underline underline-offset-4">
-            Price - {product.price} $
-          </span>
+          <div>Review - {product.rating.count}</div>
         </div>
+        <p className="font-body text-yellow-600 font-semibold underline underline-offset-4">
+          Price - {product.price} $
+        </p>
         <p className="font-body ">{product.description}</p>
       </div>
       <div className="flex flex-col gap-4 p-4 border border-gray-400 rounded-md shadow-md w-full md:w-[25%] max-w-80 min-w-40 ">
@@ -66,7 +70,10 @@ const ProductInfo = ({ productId }: { productId: string }) => {
           Add Cupon Code
         </button>
         <div className="h-[1px] bg-gray-500 w-full"></div>
-        <button className="rounded-md py-1 px-4  font-heading  shadow-md border border-yellow-500 bg-yellow-400">
+        <button
+          className="rounded-md py-1 px-4  font-heading  shadow-md border border-yellow-500 bg-yellow-400"
+          onClick={() => addToCart(product)}
+        >
           Add to cart
         </button>
       </div>

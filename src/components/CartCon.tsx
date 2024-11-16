@@ -16,8 +16,11 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
   const count = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <section className=" w-60 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 px-4 py-6">
-      <button onClick={clickHandle}>
+    <section className=" w-60 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 p-4 space-y-4">
+      <button
+        onClick={clickHandle}
+        className="p-2 rounded-full bg-gray-50 shadow"
+      >
         <FaX />
       </button>
 
@@ -29,7 +32,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
 
         <div className="flex flex-col gap-2 ">
           {cartItems.map((item) => (
-            <div className="flex gap-2 justify-between items-center bg-gray-100 shadow-md rounded-md py-1 px-2">
+            <div className="flex gap-2 justify-between items-center bg-gray-100 shadow rounded-md py-1 px-2 hover:bg-purple-300">
               <div className="w-[25%] h-12 bg-gray-300 overflow-hidden rounded-md aspect-square ">
                 <img
                   src={item.image}
