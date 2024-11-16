@@ -16,7 +16,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
   const count = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <section className=" w-60 h-screen  z-50 fixed right-0 top-0 rounded-md bg-gray-100 px-4 py-6">
+    <section className=" w-60 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 px-4 py-6">
       <button onClick={clickHandle}>
         <FaX />
       </button>
@@ -27,15 +27,17 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
         </h1>
         <div className="h-[1px] w-full bg-gray-800 rounded"></div>
 
-        <div className="flex flex-col gap-3 ">
+        <div className="flex flex-col gap-2 ">
           {cartItems.map((item) => (
             <div className="flex gap-2 justify-between items-center bg-gray-100 shadow-md rounded-md py-1 px-2">
-              <img
-                src={item.image}
-                alt="model "
-                className="w-14  h-12 bg-yellow-600 rounded-md "
-              />
-              <div className="flex flex-col items-center">
+              <div className="w-[25%] h-12 bg-gray-300 overflow-hidden rounded-md aspect-square ">
+                <img
+                  src={item.image}
+                  alt="model "
+                  className="w-full h-full aspect-square "
+                />
+              </div>
+              <div className="w-[50%] flex flex-col items-center">
                 <h2 className="text-sm line-clamp-1">{item.title}</h2>
                 <div className="flex gap-2 items-center ">
                   <button onClick={() => addQuantity(item)}>
@@ -47,6 +49,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
                   </button>
                 </div>
               </div>
+
               <button onClick={() => removeFromCart(item.id)}>
                 <FaTrashCan className="text-red-500" />
               </button>
@@ -58,8 +61,14 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
           <>
             <div className="h-[1px] w-full bg-gray-800 rounded"></div>
 
-            <button className="text-red-500" onClick={clearCart}>
+            <button
+              className="text-red-500 self-end text-sm"
+              onClick={clearCart}
+            >
               Clear all items
+            </button>
+            <button className="px-4 py-1 bg-yellow-500 rounded-md shadow-md ">
+              Check Out
             </button>
           </>
         ) : (
