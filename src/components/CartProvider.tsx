@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useContext, useReducer } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
 
 export interface Product {
   id: number;
@@ -80,7 +86,10 @@ const cartReducer = (state: CartItem[], action: CartAction): CartItem[] => {
 };
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cartItems, dispatch] = useReducer(cartReducer, []);
+  const [cartItems, dispatch] = useReducer(cartReducer, [], () => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
 
   const addToCart = (product: Product) => {
     dispatch({ type: "ADD_TO_CART", payload: product });
@@ -97,6 +106,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
   };
+
+  // to store cart in local storage
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   return (
     <CartContext.Provider
       value={{
