@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
+import Card, { CardProp } from "./Card";
 
-import { getProduct } from "./Api";
-import Card from "./Card";
-
-const RelatedProduct = ({ productType }: { productType?: string }) => {
-  const [product, setProduct] = useState([]);
-
-  const productData = async () => {
-    const res = await getProduct();
-    setProduct(res);
-  };
-  useEffect(() => {
-    productData();
-  }, []);
+interface RelatedProductProp {
+  product: CardProp[];
+  productType?: string;
+}
+const RelatedProduct = ({ product, productType }: RelatedProductProp) => {
   return (
     <section className="flex flex-col gap-4 bg-gray-100 p-4 rounded-md shadow-md">
       <h1 className="text-xl font-semibold font-heading">{productType}</h1>

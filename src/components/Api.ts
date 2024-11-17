@@ -23,6 +23,17 @@ export const getProductDetail = (id: string) => {
     });
   return productData;
 };
+export const getCategory = (name: string) => {
+  const productData = axios
+    .get(url + "/category/" + name)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  return productData;
+};
 
 interface Cart {
   id: number;

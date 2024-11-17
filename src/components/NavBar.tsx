@@ -5,6 +5,7 @@ import CartCon from "./CartCon";
 import { useState } from "react";
 
 import { useCart } from "./CartProvider";
+import Search from "./Search";
 
 const navLink = [
   {
@@ -70,16 +71,7 @@ const NavBar = () => {
 
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center border border-gray-500 rounded-md shadow-sm   ">
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Search..."
-              className="rounded-md px-2 py-1   focus:outline-none flex-1"
-            />
-            <button className="px-2 py-1  rounded">
-              <FaMagnifyingGlass className="text-yellow-500 text-lg" />
-            </button>
+            <Search />
           </div>
 
           <div className="relative cursor-pointer" onClick={clickHandle}>

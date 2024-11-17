@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import model from "../assets/model-1.png";
 
 const Hero = () => {
@@ -9,9 +10,12 @@ const Hero = () => {
           You can explore and shop many differnt collection from various barands
           here.
         </p>
-        <button className="bg-gray-900 rounded-md shadow-md px-4 py-2 text-slate-50 self-start">
+        <Link
+          to={"/shop"}
+          className="bg-gray-900 rounded-md shadow-md px-4 py-2 text-slate-50 self-start  hover:bg-purple-600"
+        >
           Shop Now
-        </button>
+        </Link>
       </div>
       <div className="hidden md:block">
         <div className="bg-yellow-400 size-96 rounded-full">
