@@ -16,8 +16,8 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
   const { addToCart } = useCart();
   const product: Product = { id, title, image, price };
   return (
-    <div className="min-w-20 group rounded-md shadow-md overflow-hidden p-3 bg-gray-100 relative">
-      <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52 aspect-square rounded-md">
+    <div className="min-w-20 group rounded-md shadow-md overflow-hidden p-3 bg-gray-50 relative">
+      <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52  rounded-md">
         <img src={image} alt="model" className="w-full h-full rounded-md  " />
       </div>
       <div className="py-2">

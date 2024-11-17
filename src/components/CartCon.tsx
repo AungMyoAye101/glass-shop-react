@@ -14,9 +14,13 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
     useCart();
 
   const count = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const totalCount = cartItems.reduce(
+    (total, curr) => total + curr.price * curr.quantity,
+    0
+  );
 
   return (
-    <section className=" w-60 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 p-4 space-y-4">
+    <section className=" w-80 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 p-4 space-y-4">
       <button
         onClick={clickHandle}
         className="p-2 rounded-full bg-gray-50 shadow"
@@ -28,11 +32,11 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
         <h1 className="text-xl font-semibold text-yellow-500 ">
           Cart items <span className="text-gray-800">( {count} )</span>
         </h1>
-        <div className="h-[1px] w-full bg-gray-800 rounded"></div>
+        <div className="h-[1px] w-full bg-gray-700 rounded"></div>
 
         <div className="flex flex-col gap-2 ">
           {cartItems.map((item) => (
-            <div className="flex gap-2 justify-between items-center bg-gray-100 shadow rounded-md py-1 px-2 hover:bg-purple-300">
+            <div className="flex gap-2 justify-between items-center bg-gray-100 shadow rounded-md py-1 px-2 border hover:border-purple-500">
               <div className="w-[25%] h-12 bg-gray-300 overflow-hidden rounded-md aspect-square ">
                 <img
                   src={item.image}
@@ -62,14 +66,18 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
 
         {cartItems.length > 0 ? (
           <>
-            <div className="h-[1px] w-full bg-gray-800 rounded"></div>
-
-            <button
-              className="text-red-500 self-end text-sm"
-              onClick={clearCart}
-            >
-              Clear all items
-            </button>
+            <div className="h-[1px] w-full bg-gray-700 rounded"></div>
+            <div className="flex justify-between items-center">
+              <h2 className="text-lg font-medium font-heading">
+                Total -{" "}
+                <span className="text-base font-body">
+                  {totalCount.toFixed(2)} ${" "}
+                </span>
+              </h2>
+              <button className="text-red-500 font-heading" onClick={clearCart}>
+                Clear all items
+              </button>
+            </div>
             <button className="px-4 py-1 bg-yellow-500 rounded-md shadow-md ">
               Check Out
             </button>
