@@ -14,22 +14,23 @@ const Category = () => {
   }, []);
 
   return (
-    <section className="min-w-60 rounded-md shadow-md bg-gray-100  p-4 ">
-      <h1 className="text-xl font-heading font-semibold mb-2  underline  underline-offset-8">
-        Category
-      </h1>
-      <div className="flex flex-col gap-2 ">
-        {list.map((item, i) => (
-          <Link
-            to={`?search=${item}`}
-            key={i}
-            className="hover:text-purple-600 font-body "
-          >
-            {item}
-          </Link>
-        ))}
-      </div>
-    </section>
+    <div className="flex  gap-2 ">
+      <Link
+        to={""}
+        className="px-2 py-1 bg-gray-100 rounded-md shadow-md hover:text-purple-600 font-body "
+      >
+        All
+      </Link>
+      {list.map((item, i) => (
+        <Link
+          to={`?search=${item}`}
+          key={i}
+          className="px-2 py-1 bg-gray-100 rounded-md shadow-md hover:text-purple-600 font-body "
+        >
+          {item}
+        </Link>
+      ))}
+    </div>
   );
 };
 

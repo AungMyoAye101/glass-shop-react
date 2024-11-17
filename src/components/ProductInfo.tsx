@@ -42,7 +42,7 @@ const ProductInfo = ({ productId }: { productId: string }) => {
           className="w-full h-[90%] rounded-md"
         />
       </div>
-      <div className="flex flex-col gap-2 w-full sm:w-[45%] md:w-[40%] ">
+      <div className="flex flex-col gap-2 w-full sm:w-[45%]  ">
         <h1 className="text-2xl font-heading font-semibold">{product.title}</h1>
         <h2 className="font-body text-gray-500">
           Category - {product.category}

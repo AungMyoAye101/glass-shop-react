@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import Category from "../components/Category";
 import RelatedProduct from "../components/RelatedProduct";
 import { useEffect, useState } from "react";
-import { getCategory } from "../components/Api";
+import { getCategory, getProduct } from "../components/Api";
 
 const Shop = () => {
   const [search] = useSearchParams();
@@ -11,9 +11,13 @@ const Shop = () => {
   const [product, setProduct] = useState([]);
 
   const productData = async () => {
-    if (!value) return;
-    const res = await getCategory(value);
-    setProduct(res);
+    if (value) {
+      const res = await getCategory(value);
+      setProduct(res);
+    } else {
+      const res = await getProduct();
+      setProduct(res);
+    }
   };
   useEffect(() => {
     productData();
@@ -21,8 +25,8 @@ const Shop = () => {
   console.log(product);
 
   return (
-    <section>
-      <div className="flex gap-4 py-6  ">
+    <section className="px-4 md:px-12 ">
+      <div className="flex flex-col gap-4 py-6  ">
         <Category />
         <RelatedProduct productType="Product" product={product} />
       </div>
