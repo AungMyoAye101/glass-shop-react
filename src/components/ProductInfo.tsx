@@ -34,15 +34,15 @@ const ProductInfo = ({ productId }: { productId: string }) => {
     productData();
   }, []);
   return (
-    <div className="flex flex-col sm:flex-row  justify-between items-start gap-8  mt-6 py-10  px-4 md:px-12  bg-gray-100 rounded-md shadow-md">
-      <div className="w-full sm:w-[45%] md:w-[30%] h-60 md:h-96 flex items-center justify-center  rounded-md shadow-md overflow-hidden bg-gray-100 p-4">
+    <div className="flex flex-col sm:flex-row gap-8 justify-start  items-start  mt-4 py-10  px-4 md:px-12  bg-gray-100 rounded-md shadow-md">
+      <div className="w-full md:w-[30%] h-80   rounded-md shadow-md overflow-hidden bg-gray-50 p-4">
         <img
           src={product.image}
           alt="product item picture"
-          className="w-full h-[90%] rounded-md"
+          className="w-full h-full rounded-md"
         />
       </div>
-      <div className="flex flex-col gap-2 w-full sm:w-[45%]  ">
+      <div className="flex flex-col gap-4 w-full md:w-[50%]  ">
         <h1 className="text-2xl font-heading font-semibold">{product.title}</h1>
         <h2 className="font-body text-gray-500">
           Category - {product.category}
@@ -58,24 +58,8 @@ const ProductInfo = ({ productId }: { productId: string }) => {
           Price - {product.price} $
         </p>
         <p className="font-body ">{product.description}</p>
-      </div>
-      <div className="flex flex-col gap-4 p-4 border border-gray-400 rounded-md shadow-md w-full md:w-[25%] max-w-80 min-w-40 ">
-        <div className="flex gap-1 items-center text-base ">
-          <FaLocationDot />
-          <span className="font-heading font-semibold text-blue-500">
-            Deliver to Myanmar
-          </span>
-        </div>
-        <select
-          className="rounded-md py-1 px-4 font-body shadow-md border border-gray-500 "
-          aria-placeholder="Add cupon card"
-        >
-          <option value="10">10 % welcome discount</option>
-          <option value="5">5 % super sales</option>
-        </select>
-        <div className="h-[1px] bg-gray-500 w-full"></div>
         <button
-          className="rounded-md py-1 px-4  font-heading  shadow-md border border-yellow-500 bg-yellow-400"
+          className="rounded-md py-1 px-4  font-heading  shadow-md border border-yellow-500 bg-yellow-400 self-start hover:bg-purple-600"
           onClick={() => addToCart(product)}
         >
           Add to cart

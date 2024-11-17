@@ -22,13 +22,12 @@ const Shop = () => {
   useEffect(() => {
     productData();
   }, [value]);
-  console.log(product);
 
   return (
     <section className="px-4 md:px-12 ">
       <div className="flex flex-col gap-4 py-6  ">
         <Category />
-        <RelatedProduct productType="Product" product={product} />
+        <RelatedProduct productType={value || "Product"} product={product} />
       </div>
     </section>
   );
