@@ -4,6 +4,7 @@ import { FaTrashCan, FaX } from "react-icons/fa6";
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
 import { useCart } from "./CartProvider";
+import { Link } from "react-router-dom";
 
 interface CartProp {
   clickHandle: () => void;
@@ -78,9 +79,12 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
                 Clear all items
               </button>
             </div>
-            <button className="px-4 py-1 bg-yellow-500 rounded-md shadow-md ">
+            <Link
+              to={"/checkout"}
+              className="px-4 py-1 bg-yellow-500 rounded-md shadow-md "
+            >
               Check Out
-            </button>
+            </Link>
           </>
         ) : (
           <p className="text-lg font-body">Your cart is empty</p>
