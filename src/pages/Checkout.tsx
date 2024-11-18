@@ -2,9 +2,12 @@ import { FaStar } from "react-icons/fa";
 
 import { IoMdPricetags } from "react-icons/io";
 import { useCart } from "../components/CartProvider";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
-  const { cartItems, removeFromCart } = useCart();
+  const { cartItems, removeFromCart, clearCart } = useCart();
+
+  const navigate = useNavigate();
 
   const count = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -66,7 +69,7 @@ const Checkout = () => {
 
         <div className="flex justify-between items-center gap-6">
           <h2 className="font-medium font-heading">Original Price</h2>
-          <p className="font-body">{totalCount} $</p>
+          <p className="font-body">{totalCount.toFixed(2)} $</p>
         </div>
         <div className="flex justify-between items-center gap-6">
           <h2 className=" font-medium font-heading">Discount Price</h2>
@@ -81,7 +84,13 @@ const Checkout = () => {
             {discountPrice.toFixed(2)} $
           </span>
         </div>
-        <button className="text-lg font-heading px-4 py-2 rounded-md shadow-md bg-yellow-400">
+        <button
+          className="text-lg  font-heading px-4 py-2 rounded-md shadow-md bg-yellow-400"
+          onClick={() => {
+            clearCart();
+            navigate("/");
+          }}
+        >
           Complete Checkout
         </button>
       </div>

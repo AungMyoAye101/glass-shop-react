@@ -81,7 +81,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
             </div>
             <Link
               to={"/checkout"}
-              className="px-4 py-1 bg-yellow-500 rounded-md shadow-md "
+              className="px-4 py-1 text-center bg-yellow-500 rounded-md shadow-md "
             >
               Check Out
             </Link>
