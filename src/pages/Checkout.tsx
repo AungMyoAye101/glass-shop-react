@@ -21,8 +21,11 @@ const Checkout = () => {
 
         {/* shopping cart section */}
         {cartItems.map((item) => (
-          <div className="flex gap-2 justify-between border border-gray-400 rounded-md p-2 ">
-            <div className="flex flex-col md:flex-row  gap-2 ">
+          <div
+            className="flex flex-col md:flex-row gap-2 justify-between border border-gray-400 rounded-md p-2 "
+            key={item.id}
+          >
+            <div className="flex   gap-2 ">
               <img
                 src={item.image}
                 alt={item.title}
@@ -40,11 +43,16 @@ const Checkout = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-2">
-              <button className="text-red-400 hover:underline">Remove</button>
+            <div className="min-w-40 flex self-end md:self-start gap-2">
+              <button
+                className="text-red-400 hover:underline"
+                onClick={() => removeFromCart(item.id)}
+              >
+                Remove
+              </button>
 
               <div className="flex gap-1 items-center text-purple-500">
-                <IoMdPricetags className="text-xl " />
+                <IoMdPricetags className="text-lg " />
                 <p className="text-lg font-body ">{item.price} $</p>
               </div>
             </div>
