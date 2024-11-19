@@ -40,11 +40,11 @@ const Checkout = () => {
                 </h1>
                 <div className="text-sm md:text-base flex items-center font-body gap-2">
                   <p className="flex items-center gap-1 ">
-                    <span>{item.rating?.rate}</span>{" "}
+                    <span>{item.rating.rate}</span>{" "}
                     <FaStar className="text-yellow-400" />
                   </p>
                   <p className="text-xs md:text-sm">
-                    ({item.rating?.count} ratings)
+                    ({item.rating.count} ratings)
                   </p>
                 </div>
               </div>

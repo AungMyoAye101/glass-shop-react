@@ -93,7 +93,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   });
 
   const addToCart = (product: Product) => {
-    console.log("click");
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
   const removeFromCart = (productID: number) => {
