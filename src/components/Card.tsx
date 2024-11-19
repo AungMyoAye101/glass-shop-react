@@ -1,20 +1,19 @@
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
 import { useCart } from "./CartProvider";
-import { Product } from "./CartProvider";
 
 export interface CardProp {
   id: number;
   title: string;
   image: string;
   price: number;
-  rating: { rate: number };
+  rating: { rate: number; count: number };
 }
 
 const Card = ({ id, title, image, price, rating }: CardProp) => {
   const { addToCart } = useCart();
-  const product: Product = { id, title, image, price };
+  const product = { id, title, image, price, rating };
+
   return (
     <div className="min-w-20 group rounded-md shadow-md overflow-hidden p-3 bg-gray-50 relative">
       <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52  rounded-md">

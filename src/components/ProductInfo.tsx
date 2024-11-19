@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProductDetail } from "./Api";
-import { FaLocationDot, FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
 import { useCart } from "./CartProvider";
 
 interface ProductProp {
