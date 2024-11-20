@@ -2,15 +2,14 @@ import { FaStar } from "react-icons/fa";
 
 import { IoMdPricetags } from "react-icons/io";
 import { useCart } from "../components/CartProvider";
-import { useNavigate } from "react-router-dom";
+
 import { useState } from "react";
+import Complete from "../components/Complete";
 
 const Checkout = () => {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const { cartItems, removeFromCart } = useCart();
   const [discount, setDiscount] = useState(0);
-  console.log(discount, typeof discount);
-
-  const navigate = useNavigate();
+  const [showComplete, setShowComplete] = useState(false);
 
   const count = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -109,14 +108,14 @@ const Checkout = () => {
           <button
             className="text-lg  font-heading px-4 py-2 rounded-md shadow-md bg-yellow-400"
             onClick={() => {
-              clearCart();
-              navigate("/");
+              setShowComplete((pre) => !pre);
             }}
           >
             Complete Checkout
           </button>
         </div>
       </div>
+      {showComplete && <Complete />}
     </section>
   );
 };

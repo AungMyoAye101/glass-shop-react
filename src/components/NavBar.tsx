@@ -38,7 +38,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="z-50 flex justify-center items-center gap-4 md:justify-between px-4 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50 bg-opacity-95 backdrop-blur-sm">
+      <nav className="z-30 flex justify-center items-center gap-4 md:justify-between px-4 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50 bg-opacity-95 backdrop-blur-sm">
         <div className="flex items-center gap-4 ">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold font-heading">
@@ -54,19 +54,6 @@ const NavBar = () => {
               </Link>
             ))}
           </div>
-        </div>
-
-        <div className="flex md:hidden items-center border border-gray-500 rounded-md shadow-sm flex-1 min-w-16">
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Search..."
-            className="rounded-md px-2 py-1   focus:outline-none  flex-1 min-w-10  "
-          />
-          <button className="px-2 py-1  rounded">
-            <FaMagnifyingGlass className="text-yellow-500 text-lg" />
-          </button>
         </div>
 
         <div className="flex items-center gap-4">
