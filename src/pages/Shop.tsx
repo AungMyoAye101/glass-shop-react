@@ -1,8 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import Category from "../components/Category";
-import RelatedProduct from "../components/RelatedProduct";
 import { useEffect, useState } from "react";
 import { getCategory, getProduct } from "../components/Api";
+import ProductGrid from "../components/ProductGrid";
 
 const Shop = () => {
   const [search] = useSearchParams();
@@ -27,7 +27,7 @@ const Shop = () => {
     <section className="px-4 md:px-12 ">
       <div className="flex flex-col gap-4 py-6  ">
         <Category />
-        <RelatedProduct productType={value || "Product"} product={product} />
+        <ProductGrid product={product} />
       </div>
     </section>
   );
