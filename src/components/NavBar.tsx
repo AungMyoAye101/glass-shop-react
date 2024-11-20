@@ -70,9 +70,7 @@ const NavBar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center border border-gray-500 rounded-md shadow-sm   ">
-            <Search />
-          </div>
+          <Search />
 
           <div className="relative cursor-pointer" onClick={clickHandle}>
             <IoCartOutline className="text-xl" />

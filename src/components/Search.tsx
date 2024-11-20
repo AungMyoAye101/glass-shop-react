@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { getProduct } from "./Api";
 import { CardProp } from "./Card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const [search, setSearch] = useState("");
 
   const [product, setProduct] = useState<CardProp[]>([]);
-
-  const navigate = useNavigate();
 
   const productData = async () => {
     const res = await getProduct();
@@ -18,10 +16,6 @@ const Search = () => {
   useEffect(() => {
     productData();
   }, [search]);
-  const handleSubmit = () => {
-    setSearch("");
-    console.log("click");
-  };
 
   const filteredProduct = product.filter((product) => {
     if (search.length < 1 || search === "") return;
@@ -30,17 +24,17 @@ const Search = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <div className="flex items-center border border-gray-500 rounded-md shadow-sm ">
         <input
           type="text"
-          name="searchText"
+          value={search}
           placeholder="Search..."
+          onChange={(e) => setSearch(e.target.value)}
           className="rounded-md px-2 py-1   focus:outline-none flex-1"
         />
-        <button type="submit" className="px-2 py-1  rounded">
-          <FaMagnifyingGlass className="text-yellow-500 text-lg" />
-        </button>
-      </form>
+
+        <FaMagnifyingGlass className="text-yellow-500 text-lg " />
+      </div>
       {search.length > 0 && (
         <div className="absolute top-16 flex flex-col  bg-gray-100  rounded-md max-h-screen  max-w-80 overflow-hidden overflow-y-scroll">
           {filteredProduct.map((item) => (
@@ -48,7 +42,7 @@ const Search = () => {
               to={`/product/${item.id}`}
               className="flex items-center gap-2 border border-gray-300 m-1 hover:border-purple-400 rounded-md p-2 "
               key={item.id}
-              onClick={() => navigate(`/product/${item.id}`)}
+              onClick={() => (window.location.href = `/product/${item.id}`)}
             >
               <div className="w-10 h-8 ">
                 <img
