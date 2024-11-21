@@ -41,7 +41,7 @@ const NavBar = () => {
         <div className="flex items-center gap-4 ">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold font-heading">
-              Ecommerce
+              RARE
             </h1>
           </div>
 
@@ -54,12 +54,12 @@ const NavBar = () => {
             ))}
           </div>
         </div>
-
-        <div className="flex items-center gap-4">
+        <div className="flex-1">
           <Search />
-
+        </div>
+        <div className="flex items-center gap-4">
           <div className="relative cursor-pointer" onClick={clickHandle}>
-            <IoCartOutline className="text-xl" />
+            <IoCartOutline className="text-2xl" />
             {cartItems.length > 0 && (
               <div className="size-4 rounded-full text-sm font-body bg-rose-600 text-gray-100 flex justify-center items-center absolute -bottom-1 -right-1 ">
                 {count}

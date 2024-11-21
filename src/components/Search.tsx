@@ -24,7 +24,7 @@ const Search = () => {
 
   return (
     <>
-      <div className="flex items-center border border-gray-500 rounded-md shadow-sm ">
+      <div className="flex items-center border border-gray-500 rounded-md shadow-sm overflow-hidden">
         <input
           type="text"
           value={search}
@@ -32,8 +32,9 @@ const Search = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="rounded-md px-2 py-1   focus:outline-none flex-1"
         />
-
-        <FaMagnifyingGlass className="text-yellow-500 text-lg " />
+        <div className="px-2 py-2 bg-yellow-300 h-full">
+          <FaMagnifyingGlass className="text-lg text-gray-400 " />
+        </div>
       </div>
       {search.length > 0 && (
         <div className="absolute top-16 flex flex-col  bg-gray-100  rounded-md max-h-screen  max-w-80 overflow-hidden overflow-y-scroll">
