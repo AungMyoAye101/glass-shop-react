@@ -1,53 +1,31 @@
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="px-12 py-4 rounded  bg-gray-700 text-gray-100 space-y-4">
-      <div className="  flex flex-wrap gap-6  justify-center  md:justify-between ">
+    <section className="px-4 md:px-12 py-4 rounded bg-gradient-to-tr from-gray-300 to-gray-600  text-gray-800 flex justify-center">
+      <div className="flex flex-col gap-2 justify-center items-center">
+        <h1 className="text-2xl font-bold font-heading">RARE </h1>
+        <div className="flex gap-4 text-2xl">
+          <FaFacebook />
+          <FaTwitter />
+          <FaInstagram />
+          <FaWhatsapp />
+        </div>
+        <div className="flex gap-4 text-lg font-body font-medium">
+          <Link to={"/"}>Home</Link>
+          <Link to={"/shop"}>Shop</Link>
+          <Link to={"/about"}>About</Link>
+          <Link to={"/contact"}>Contact Us</Link>
+        </div>
         <div>
-          <h1 className="text-2xl font-heading ">Ecommerce</h1>
+          <small>© 2024 Rare ecommerce by AMA. </small>
         </div>
-        <div className="flex flex-col gap-3 ">
-          <Link
-            to="/"
-            className="text-lg font-body hover:text-purple-400 hover:underline-offset-8 hover:underline"
-          >
-            Home
-          </Link>
-          <Link
-            to="/shop"
-            className="text-lg font-body hover:text-purple-400 hover:underline-offset-8 hover:underline"
-          >
-            Shop
-          </Link>
-          <Link
-            to="/about"
-            className="text-lg font-body hover:text-purple-400 hover:underline-offset-8 hover:underline"
-          >
-            About
-          </Link>
-          <Link
-            to="/contact"
-            className="text-lg font-body hover:text-purple-400 hover:underline-offset-8 hover:underline"
-          >
-            Contact
-          </Link>
-        </div>
-        <div className="flex gap-2 flex-col">
-          <textarea
-            className="border border-gray-400 focus:outline-none rounded-md shadow-md px-4 py-1 h-20"
-            placeholder="Lets us know your opion"
-          />
-          <button className="px-4 py-1 rounded-md shadow-md bg-purple-500 text-gray-100">
-            Send
-          </button>
-        </div>
-      </div>
-      <div className="bg-gray-800 rounded-md py-1 ">
-        <p className="text-center text-gray-100">
-          Copyright & allrights reserved.{" "}
-          <span className="text-purple-600">Make With Love</span>
-        </p>
       </div>
     </section>
   );
