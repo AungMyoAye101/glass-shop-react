@@ -5,12 +5,12 @@ import Loading from "../components/Loading";
 
 const Home = () => {
   return (
-    <div>
+    <Suspense fallback="Loading data...">
       <Hero />
       <Suspense fallback={<Loading />}>
         <ProductCon />
       </Suspense>
-    </div>
+    </Suspense>
   );
 };
 

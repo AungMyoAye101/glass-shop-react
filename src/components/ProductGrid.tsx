@@ -1,6 +1,7 @@
-import { Suspense } from "react";
-import Card, { CardProp } from "./Card";
+import { lazy, Suspense } from "react";
+import { CardProp } from "./Card";
 import Loading from "./Loading";
+const Card = lazy(() => import("./Card"));
 
 const ProductGrid = ({ product }: { product: CardProp[] }) => {
   return (
