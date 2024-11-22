@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="px-4 md:px-12 py-4 rounded bg-gradient-to-tr from-gray-300 to-gray-600  text-gray-800 flex justify-center">
+    <section className="px-4 md:px-12 py-4 rounded bg-gradient-to-b from-gray-300 to-gray-400  text-gray-800 flex justify-center">
       <div className="flex flex-col gap-2 justify-center items-center">
         <h1 className="text-2xl font-bold font-heading">RARE </h1>
         <div className="flex gap-4 text-2xl">
