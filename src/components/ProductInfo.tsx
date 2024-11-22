@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { getProductDetail } from "./Api";
 import { FaStar } from "react-icons/fa6";
 import { useCart } from "./CartProvider";
+import Skeleton from "react-loading-skeleton";
 
 interface ProductProp {
   id: number;
@@ -35,13 +36,15 @@ const ProductInfo = ({ productId }: { productId: string }) => {
   }, []);
   return (
     <div className="flex flex-col sm:flex-row gap-8 justify-start  items-start  mt-4 py-10  px-4 md:px-12  bg-gray-100 rounded-md shadow-md">
-      <div className="w-full md:w-[30%] h-80   rounded-md shadow-md overflow-hidden bg-gray-50 p-4">
-        <img
-          src={product.image}
-          alt="product item picture"
-          className="w-full h-full rounded-md"
-        />
-      </div>
+      <Suspense fallback={<Skeleton height={240} width={100} />}>
+        <div className="w-full md:w-[30%] h-80   rounded-md shadow-md overflow-hidden bg-gray-50 p-4">
+          <img
+            src={product.image}
+            alt="product item picture"
+            className="w-full h-full rounded-md"
+          />
+        </div>
+      </Suspense>
       <div className="flex flex-col gap-4 w-full md:w-[50%]  ">
         <h1 className="text-2xl font-heading font-semibold">{product.title}</h1>
         <h2 className="font-body text-gray-500">
