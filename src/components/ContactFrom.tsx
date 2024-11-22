@@ -29,7 +29,7 @@ const ContactFrom = () => {
 
       <div className="flex flex-col gap-1">
         <label htmlFor="email" className="font-body text-gray-700 ">
-          Your
+          Your comment
         </label>
         <textarea
           id="text"
