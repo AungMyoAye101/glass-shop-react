@@ -14,10 +14,10 @@ const About = () => {
         </div>
         <div className="w-full md:w-[40%]">
           <p className="text-base md:text-xl font-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-            saepe velit at similique mollitia eius ut quibusdam dolorem
-            voluptatem repudiandae consectetur, modi quaerat libero accusantium
-            architecto dolore consequatur veritatis esse?
+            We pride ourselves on providing an unparalleled delivery experience.
+            Our commitment to excellence ensures that your shopping journey is
+            smooth, from the moment you place your order to the moment it
+            arrives at your doorstep.
           </p>
         </div>
       </div>
@@ -27,10 +27,9 @@ const About = () => {
         </div>
         <div className="w-full md:w-[40%]">
           <p className="text-base md:text-xl font-body ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-            saepe velit at similique mollitia eius ut quibusdam dolorem
-            voluptatem repudiandae consectetur, modi quaerat libero accusantium
-            architecto dolore consequatur veritatis esse?
+            We are dedicated to providing an outstanding shopping experience
+            from start to finish. Our commitment to excellence ensures that you
+            receive the best service possible, every time you shop with us.
           </p>
         </div>
       </div>
