@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import ProductsDetail from "./pages/ProductsDetail";
 import Checkout from "./pages/Checkout";
 import { lazy, Suspense } from "react";
+import SkeletonCard from "./components/SkeletonCard";
 
 const Home = lazy(() => import("./pages/Home"));
 const Shop = lazy(() => import("./pages/Shop"));
@@ -15,7 +16,17 @@ function App() {
   return (
     <section className="max-w-8xl mx-auto bg-gray-200">
       <NavBar />
-      <Suspense fallback={<h1>Loading....</h1>}>
+      <Suspense
+        fallback={
+          <div className="grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 ">
+            {Array(10)
+              .fill(null)
+              .map((_, i) => (
+                <SkeletonCard key={i} />
+              ))}
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
