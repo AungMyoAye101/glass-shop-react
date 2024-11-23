@@ -1,6 +1,7 @@
-import { FaStar } from "react-icons/fa6";
+import { FaBagShopping, FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useCart } from "./CartProvider";
+import { FaInfoCircle } from "react-icons/fa";
 
 export interface CardProp {
   id: number;
@@ -15,7 +16,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
   const product = { id, title, image, price, rating };
 
   return (
-    <div className="min-w-20 group rounded-md shadow-md overflow-hidden p-3 bg-gray-50 relative">
+    <div className="min-w-20 group rounded-md shadow-md  p-3 bg-gray-50 relative overflow-hidden">
       <div className="w-full h-20 sm:h-32 md:h-44 lg:h-52  rounded-md">
         <img src={image} alt="model" className="w-full h-full rounded-md  " />
       </div>
@@ -32,20 +33,22 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
         </div>
       </div>
 
-      <div className="font-body absolute h-0  top-0 w-full right-0 z-20 group-hover:opacity-100 opacity-0 flex group-hover:h-full transition-all ease-out duration-500  flex-col gap-1 justify-center items-center  bg-gray-700 bg-opacity-75">
-        <Link
-          to={`/product/${id}`}
-          className="  px-4 py-1 rounded-full bg-gray-100"
-        >
-          View Details
-        </Link>
-        <span className="text-lg font-semibold text-gray-100">OR</span>
-        <button
-          className="  px-4 py-1 rounded-full bg-yellow-500"
-          onClick={() => addToCart(product)}
-        >
-          Add to Cart
-        </button>
+      <div className="font-body absolute h-full  top-0 -right-full  group-hover:right-0   w-[20%] transition-all ease-out duration-500    ">
+        <div className="flex flex-col gap-2 py-4  items-center bg-gray-600 rounded-md">
+          <Link
+            to={`/product/${id}`}
+            className="text-xl p-1 rounded-full bg-gray-100 hover:bg-yellow-400"
+          >
+            <FaInfoCircle />
+          </Link>
+
+          <button
+            className="text-xl p-1   rounded-full bg-gray-200 text-purple-600 hover:bg-yellow-400"
+            onClick={() => addToCart(product)}
+          >
+            <FaBagShopping />
+          </button>
+        </div>
       </div>
     </div>
   );
