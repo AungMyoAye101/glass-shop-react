@@ -1,8 +1,8 @@
 const ContactFrom = () => {
   return (
-    <form className="w-96 px-4 py-6 flex flex-col gap-4 rounded-md shadow-md bg-gray-100">
+    <form className="w-96 px-4 py-6 flex flex-col gap-4 rounded-md shadow-md bg-gray-50">
       <h1 className="text-lg text-center font-heading  font-semibold">
-        Feel Free To Reach Me{" "}
+        Feel Free To Reach Us
       </h1>
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="font-body text-gray-700 ">
@@ -12,7 +12,7 @@ const ContactFrom = () => {
           type="name"
           id="name"
           placeholder="your name"
-          className="px-4 py-2 rounded-md shadow-md focus:outline-none"
+          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-500"
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -23,7 +23,7 @@ const ContactFrom = () => {
           type="email"
           id="email"
           placeholder="example@gmail.com"
-          className="px-4 py-2 rounded-md shadow-md focus:outline-none"
+          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-500"
         />
       </div>
 
@@ -33,7 +33,7 @@ const ContactFrom = () => {
         </label>
         <textarea
           id="text"
-          className="px-4 py-2 rounded-md shadow-md focus:outline-none"
+          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-500"
           placeholder="Enter your text"
         />
       </div>
