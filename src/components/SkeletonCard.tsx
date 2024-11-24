@@ -8,7 +8,7 @@ const SkeletonCard = () => (
       .map((_, i) => (
         <div
           key={i}
-          className="min-w-20 group rounded-md shadow-md overflow-hidden p-3 bg-gray-50 relative"
+          className="min-w-30 group rounded-md shadow-md overflow-hidden p-3 bg-gray-50 relative"
         >
           <Skeleton height={200} width="100%" />
           <Skeleton height={20} width="100%" />

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import slide from "../img/slide1.png";
-import slide2 from "../img/slide-2.png";
-import slide3 from "../img/slide3.png";
+import slide from "../img/slide-1.svg";
+import slide2 from "../img/slide-2.svg";
+import slide3 from "../img/slide-3.svg";
 import { useEffect, useState } from "react";
 
 const slides = [
