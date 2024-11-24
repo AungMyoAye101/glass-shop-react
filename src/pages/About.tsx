@@ -3,7 +3,7 @@ import location from "../assets/location.jpg";
 
 const About = () => {
   return (
-    <section className="min-h-screen flex flex-col gap-14   py-12 px-4 md:px-12  ">
+    <section className="min-h-screen flex flex-col gap-14   py-12 px-4 md:px-12 bg-gradient-to-tr from-purple-200  to-purple-300 ">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 ">
         <div className="w-full sm:w-[80%] md:w-[40%] rounded-md overflow-hidden">
           <img

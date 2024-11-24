@@ -53,7 +53,7 @@ const Hero = () => {
               </p>
               <Link
                 to={"/shop"}
-                className="bg-gray-900 rounded-md shadow-md px-4 py-2 text-slate-50 self-start  hover:bg-purple-600"
+                className="bg-gray-900 rounded-md shadow-md px-4 py-1.5 text-slate-50 self-start  hover:bg-purple-600"
               >
                 Shop Now
               </Link>
