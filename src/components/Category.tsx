@@ -14,18 +14,15 @@ const Category = () => {
   }, []);
 
   return (
-    <div className="flex  gap-2 ">
-      <Link
-        to={""}
-        className="px-2 py-1 bg-gray-100 rounded-md shadow-md hover:text-purple-600 font-body "
-      >
+    <div className="flex flex-wrap gap-1 ">
+      <Link to={""} className="px-1   hover:text-purple-600 font-body ">
         All
       </Link>
       {list.map((item, i) => (
         <Link
           to={`?search=${item}`}
           key={i}
-          className="px-2 py-1 bg-gray-100 rounded-md shadow-md hover:text-purple-600 font-body "
+          className="px-1    hover:text-purple-600 font-body "
         >
           {item}
         </Link>

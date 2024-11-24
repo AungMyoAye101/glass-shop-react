@@ -30,7 +30,7 @@ const Search = () => {
           value={search}
           placeholder="Search..."
           onChange={(e) => setSearch(e.target.value)}
-          className="rounded-md px-2 py-1   focus:outline-none flex-1"
+          className="rounded-md px-2 py-1   focus:outline-none min-w-4 flex-1"
         />
         <div className="px-2 py-2 bg-yellow-300 h-full">
           <FaMagnifyingGlass className="text-lg text-gray-400 " />
