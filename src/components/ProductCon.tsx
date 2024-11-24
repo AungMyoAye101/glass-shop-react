@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 
 import { getProduct } from "./Api";
 
@@ -8,10 +8,12 @@ const ProductGrid = lazy(() => import("./ProductGrid"));
 
 const ProductCon = () => {
   const [product, setProduct] = useState([]);
+  const [loading, setloading] = useState(true);
 
   const productData = async () => {
     const res = await getProduct();
     setProduct(res);
+    setloading(false);
   };
   useEffect(() => {
     productData();
@@ -19,9 +21,7 @@ const ProductCon = () => {
   return (
     <section className="px-12 py-10 space-y-4 ">
       <h1 className="font-heading text-2xl font-semibold">Product</h1>
-      <Suspense fallback={<SkeletonCard />}>
-        <ProductGrid product={product} />
-      </Suspense>
+      {loading ? <SkeletonCard /> : <ProductGrid product={product} />}
     </section>
   );
 };
