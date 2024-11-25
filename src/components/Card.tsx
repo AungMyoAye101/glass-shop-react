@@ -20,8 +20,8 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
         to={`/product/${id}`}
         onClick={() => (window.location.href = `/product/${id}`)}
       >
-        <div className="w-full h-28 sm:h-32 md:h-44 lg:h-48 bg-gray-100 overflow-hidden rounded-md">
-          <img src={image} alt="model" className="w-full h-full  " />
+        <div className="w-full h-28 sm:h-32 md:h-44 lg:h-48 bg-gray-100 overflow-hidden rounded-md p-1">
+          <img src={image} alt="model" className="w-full h-full rounded-md " />
         </div>
       </Link>
       <div className=" flex flex-col gap-1 py-1.5">

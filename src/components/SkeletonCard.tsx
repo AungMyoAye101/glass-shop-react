@@ -11,11 +11,12 @@ const SkeletonCard = () => (
           className="min-w-30 group rounded-md shadow-md overflow-hidden p-3 bg-gray-50 relative"
         >
           <Skeleton height={140} width="100%" />
-          <Skeleton height={20} width="100%" />
+          <Skeleton height={25} width="100%" />
           <div className="grid grid-cols-2 gap-6 mb-2">
             <Skeleton height={20} width="100" />
             <Skeleton height={20} width="100" />
           </div>
+          <Skeleton height={30} width="100" />
         </div>
       ))}
   </div>

@@ -9,7 +9,7 @@ import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./pages/Home"));
 const Shop = lazy(() => import("./pages/Shop"));
-const About = lazy(() => import("./pages/About"));
+const Blog = lazy(() => import("./pages/Blog"));
 const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/Blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/product/:id" element={<ProductsDetail />} />

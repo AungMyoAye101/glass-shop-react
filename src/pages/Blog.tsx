@@ -1,7 +1,7 @@
 import delivery from "../assets/delivery.jpg";
 import location from "../assets/location.jpg";
 
-const About = () => {
+const Blog = () => {
   return (
     <section className="min-h-screen flex flex-col gap-14   py-12 px-4 md:px-12 bg-gradient-to-tr from-purple-200  to-purple-300 ">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 ">
@@ -13,7 +13,7 @@ const About = () => {
           />
         </div>
         <div className="w-full md:w-[40%]">
-          <p className="text-base md:text-xl font-body">
+          <p className="text-base md:text-xl font-body font-semibold">
             We pride ourselves on providing an unparalleled delivery experience.
             Our commitment to excellence ensures that your shopping journey is
             smooth, from the moment you place your order to the moment it
@@ -26,7 +26,7 @@ const About = () => {
           <img src={location} alt="mall photo" className="w-full h-full " />
         </div>
         <div className="w-full md:w-[40%]">
-          <p className="text-base md:text-xl font-body ">
+          <p className="text-base md:text-xl font-body font-semibold ">
             We are dedicated to providing an outstanding shopping experience
             from start to finish. Our commitment to excellence ensures that you
             receive the best service possible, every time you shop with us.
@@ -37,4 +37,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Blog;

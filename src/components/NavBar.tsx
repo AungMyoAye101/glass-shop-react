@@ -16,11 +16,11 @@ export const navLink = [
     path: "/shop",
   },
   {
-    name: "About",
-    path: "/about",
+    name: "Blog",
+    path: "/blog",
   },
   {
-    name: "Contact",
+    name: "Contact Us",
     path: "/contact",
   },
 ];
