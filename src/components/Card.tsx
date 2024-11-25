@@ -15,16 +15,16 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
   const product = { id, title, image, price, rating };
 
   return (
-    <div className="min-w-20 group rounded-md shadow-md  p-3 bg-gray-50 relative overflow-hidden  hover:shadow-purple-500">
+    <div className="min-w-20 group rounded-md shadow-md  px-2 py-3 border border-gray-300 bg-gray-50 relative overflow-hidden  hover:shadow-purple-500">
       <Link
         to={`/product/${id}`}
         onClick={() => (window.location.href = `/product/${id}`)}
       >
-        <div className="w-full h-20 sm:h-32 md:h-44 lg:h-48  rounded-md">
-          <img src={image} alt="model" className="w-full h-full rounded-md  " />
+        <div className="w-full h-28 sm:h-32 md:h-44 lg:h-48 bg-gray-100 overflow-hidden rounded-md">
+          <img src={image} alt="model" className="w-full h-full  " />
         </div>
       </Link>
-      <div className=" flex flex-col gap-1.5">
+      <div className=" flex flex-col gap-1 py-1.5">
         <h1 className="font-heading font-semibold text-sm md:text-base line-clamp-1">
           {title}
         </h1>
@@ -33,11 +33,11 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
             <span>{rating.rate}</span>
             <FaStar className="text-yellow-500" />
           </div>
-          <p className=" text-orange-400">{price} $</p>
+          <p className=" text-orange-400 font-semibold">{price} $</p>
         </div>
         <button
           onClick={() => addToCart(product)}
-          className="px-2 py-1 bg-yellow-400 rounded-full hover:scale-95 "
+          className="px-2 py-1 bg-yellow-400 rounded-full hover:bg-purple-400 "
         >
           Add to cart
         </button>

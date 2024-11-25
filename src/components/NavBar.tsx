@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useCart } from "./CartProvider";
 import Search from "./Search";
 
-const navLink = [
+export const navLink = [
   {
     name: "Home",
     path: "/",
