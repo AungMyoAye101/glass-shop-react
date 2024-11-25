@@ -1,7 +1,9 @@
+import loading from "../assets/loading.svg";
+
 const Loading = () => {
   return (
     <section className="flex justify-center items-center h-screen">
-      <h1>Loading...</h1>
+      <img src={loading} alt="loading" />
     </section>
   );
 };

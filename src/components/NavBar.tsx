@@ -36,7 +36,7 @@ const NavBar = () => {
     <>
       <nav className="z-30 flex  items-center gap-2  md:gap-4 justify-between px-4 md:px-12 py-3 border-b shadow-md sticky top-0 right-0 left-0 bg-slate-50 bg-opacity-95 backdrop-blur-sm">
         <div
-          className=" p-1.5 bg-gray-50 shadow-md rounded-full cursor-pointer hover:bg-purple-300"
+          className=" block md:hidden p-1.5 bg-gray-50 shadow-md rounded-full cursor-pointer hover:bg-purple-300"
           onClick={() => showToggle("side")}
         >
           <FaBars />
