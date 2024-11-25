@@ -41,14 +41,14 @@ const Hero = () => {
         {slides.map((item, i) => (
           <section
             key={i}
-            className="w-screen min-h-screen relative flex-shrink-0 flex items-center justify-center gap-2 md:gap-12 px-4 md:px-12  transition-transform duration-700 ease-out"
+            className="w-screen h-[40vh] md:h-screen relative flex-shrink-0 flex items-center justify-center gap-2 md:gap-12 px-4 md:px-12  transition-transform duration-700 ease-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
-            <div className="flex flex-col gap-2  md:gap-6  w-[55%] md:w-[50%]">
-              <h1 className="text-xl md:text-5xl font-heading font-bold ">
+            <div className="flex flex-col gap-2  md:gap-6  w-[70%] md:w-[50%]">
+              <h1 className="text-lg sm:text-xl md:text-5xl font-heading font-bold ">
                 {item.title}
               </h1>
-              <p className="text-lg md:text-2xl font-heading font-semibold">
+              <p className=" text-base sm:text-lg md:text-2xl font-heading font-semibold">
                 {item.dese}
               </p>
               <Link
@@ -58,7 +58,7 @@ const Hero = () => {
                 Shop Now
               </Link>
             </div>
-            <div className="w-[40%] md:w-[45%]">
+            <div className="w-[30%] md:w-[45%]">
               <img
                 src={item.image}
                 alt="model photo"
