@@ -8,7 +8,7 @@ const Home = () => {
     <Suspense fallback="Loading data...">
       <Hero />
       <Suspense fallback={<Skeleton />}>
-        <ProductCon />
+        <ProductCon title="Products" />
       </Suspense>
     </Suspense>
   );
