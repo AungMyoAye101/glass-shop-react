@@ -37,7 +37,7 @@ const ProductInfo = ({ productId }: { productId: string }) => {
     productData();
   }, []);
   return (
-    <>
+    <section className="px-4 md:px-12">
       {loading ? (
         <ProductDetailSkeleton />
       ) : (
@@ -77,7 +77,7 @@ const ProductInfo = ({ productId }: { productId: string }) => {
           </div>
         </div>
       )}
-    </>
+    </section>
   );
 };
 

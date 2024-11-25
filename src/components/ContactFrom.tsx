@@ -1,6 +1,6 @@
 const ContactFrom = () => {
   return (
-    <form className="w-96 px-4 py-6 flex flex-col gap-4 rounded-md shadow-md bg-gray-50">
+    <form className="w-96 px-4 py-6 flex flex-col gap-4 rounded-md shadow-md border border-gray-400 bg-gray-50">
       <h1 className="text-lg text-center font-heading  font-semibold">
         Feel Free To Reach Us
       </h1>
@@ -12,7 +12,7 @@ const ContactFrom = () => {
           type="name"
           id="name"
           placeholder="your name"
-          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-500"
+          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-400"
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -23,17 +23,17 @@ const ContactFrom = () => {
           type="email"
           id="email"
           placeholder="example@gmail.com"
-          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-500"
+          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-400"
         />
       </div>
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="email" className="font-body text-gray-700 ">
+        <label htmlFor="email" className="font-body text-gray-400 ">
           Your comment
         </label>
         <textarea
           id="text"
-          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-500"
+          className="px-4 py-2 rounded-md shadow-md focus:outline-none border border-gray-400"
           placeholder="Enter your text"
         />
       </div>

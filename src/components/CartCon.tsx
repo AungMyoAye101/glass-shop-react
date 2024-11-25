@@ -7,7 +7,7 @@ import { useCart } from "./CartProvider";
 import { Link } from "react-router-dom";
 
 interface CartProp {
-  clickHandle: () => void;
+  clickHandle: (type: string) => void;
 }
 
 const CartCon: FC<CartProp> = ({ clickHandle }) => {
@@ -23,7 +23,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
   return (
     <section className=" w-80 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 p-4 space-y-4">
       <button
-        onClick={clickHandle}
+        onClick={() => clickHandle("cart")}
         className="p-2 rounded-full bg-gray-50 shadow"
       >
         <FaX />
@@ -81,6 +81,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
             </div>
             <Link
               to={"/checkout"}
+              onClick={() => clickHandle("cart")}
               className="px-4 py-1 text-center bg-yellow-500 rounded-md shadow-md "
             >
               Check Out

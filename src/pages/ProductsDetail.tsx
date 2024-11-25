@@ -8,7 +8,7 @@ const ProductsDetail = () => {
   const { id } = useParams();
 
   return (
-    <section className="px-4 md:px-12">
+    <section>
       <ProductInfo productId={id!} />
       <ProductCon title="Related product" />
     </section>
