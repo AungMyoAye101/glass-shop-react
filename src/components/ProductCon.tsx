@@ -20,7 +20,7 @@ const ProductCon = ({ title }: { title: string }) => {
   }, []);
   return (
     <section className="px-4 sm:px-6 md:px-12 py-4 ">
-      <div className="space-y-4 bg-gray-100 rounde-md  px-6 py-8 rounded-md shadow-md">
+      <div className="space-y-4 ">
         <h1 className="font-heading text-2xl font-semibold">{title}</h1>
         {loading ? <SkeletonCard /> : <ProductGrid product={product} />}
       </div>

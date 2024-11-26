@@ -16,7 +16,7 @@ const SkeletonCard = () => (
             <Skeleton height={20} width="100" />
             <Skeleton height={20} width="100" />
           </div>
-          <Skeleton height={30} width="100" />
+          <Skeleton height={30} width="100" className="rounded-full" />
         </div>
       ))}
   </div>

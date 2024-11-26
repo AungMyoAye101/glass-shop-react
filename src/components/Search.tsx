@@ -26,10 +26,10 @@ const Search = () => {
   return (
     <section className="relative">
       <div onClick={() => setOpen((pre) => !pre)}>
-        <FaMagnifyingGlass className="text-lg cursor-pointer" />
+        <FaMagnifyingGlass className="text-lg cursor-pointer hover:text-purple-400" />
       </div>
       {open && (
-        <div className=" absolute top-10 -right-2 flex flex-col gap-1 p-2 rounded-md shadow-md w-80 bg-gray-100 ">
+        <div className=" absolute top-10 -right-4 flex flex-col gap-1 p-2 rounded-md shadow-md w-80 bg-gray-100 ">
           <div className="flex items-center border border-gray-500 rounded-md shadow-sm">
             <input
               type="text"

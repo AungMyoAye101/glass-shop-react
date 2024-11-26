@@ -15,16 +15,16 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
   const product = { id, title, image, price, rating };
 
   return (
-    <div className="min-w-20 group rounded-md shadow-md  px-2 py-3 border border-gray-300 bg-gray-50 relative overflow-hidden  hover:shadow-purple-500">
+    <div className="min-w-20 group bg-gray-100 shadow relative overflow-hidden  hover:shadow-purple-500">
       <Link
         to={`/product/${id}`}
         onClick={() => (window.location.href = `/product/${id}`)}
       >
-        <div className="w-full h-28 sm:h-32 md:h-44 lg:h-48 bg-gray-100 overflow-hidden rounded-md p-1">
-          <img src={image} alt="model" className="w-full h-full rounded-md " />
+        <div className="w-full h-28 sm:h-32 md:h-44 lg:h-48 overflow-hidden rounded-md ">
+          <img src={image} alt="model" className="w-full h-full  " />
         </div>
       </Link>
-      <div className=" flex flex-col gap-1 py-1.5">
+      <div className=" flex flex-col gap-1 p-2">
         <h1 className="font-heading font-semibold text-sm md:text-base line-clamp-1">
           {title}
         </h1>

@@ -11,7 +11,7 @@ export const navLink = [
   { id: 1, name: "Home", path: "/" },
   { id: 2, name: "Shop", path: "/shop" },
   { id: 3, name: "Blog", path: "/blog" },
-  { id: 4, name: "Contact Us", path: "/contact" },
+  { id: 4, name: "Contact us", path: "/contact" },
 ];
 
 const NavBar = () => {
