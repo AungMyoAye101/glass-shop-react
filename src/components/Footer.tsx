@@ -1,9 +1,4 @@
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaWhatsapp,
-} from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { navLink } from "./NavBar";
 
@@ -16,7 +11,7 @@ const Footer = () => {
           <FaFacebook className="hover:text-purple-700" />
           <FaTwitter className="hover:text-purple-700" />
           <FaInstagram className="hover:text-purple-700" />
-          <FaWhatsapp className="hover:text-purple-700" />
+          <FaGithub className="hover:text-purple-700" />
         </div>
         <div className="flex gap-4 text-lg font-body font-medium">
           {navLink.map((item, i) => (

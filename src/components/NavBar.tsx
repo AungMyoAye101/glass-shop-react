@@ -42,7 +42,9 @@ const NavBar = () => {
           <FaBars />
         </div>
 
-        {toggle.side && <SideBars closeSide={showToggle} />}
+        {toggle.side && (
+          <SideBars closeSide={showToggle} isOpen={toggle.side} />
+        )}
 
         <div className="flex items-center gap-4 ">
           <div>

@@ -2,15 +2,24 @@ import { Link } from "react-router-dom";
 import { navLink } from "./NavBar";
 import {
   FaFacebook,
+  FaGithub,
   FaInstagram,
   FaTwitter,
-  FaWhatsapp,
   FaX,
 } from "react-icons/fa6";
 
-const SideBars = ({ closeSide }: { closeSide: (type: string) => void }) => {
+const SideBars = ({
+  closeSide,
+  isOpen,
+}: {
+  closeSide: (type: string) => void;
+  isOpen: boolean;
+}) => {
   return (
-    <section className="w-screen fixed left-0 top-0 h-screen z-50 bg-gray-100 py-10 flex flex-col px-4 rounded-md">
+    <section
+      className="w-screen fixed  transition-all ease-out duration-1000 left-0 top-0 h-screen z-50 bg-gray-100 py-10 flex flex-col px-4 rounded-md ${
+    "
+    >
       <button
         className="p-2  rounded-full shadow-md self-end bg-gray-100"
         onClick={() => closeSide("side")}
@@ -38,7 +47,7 @@ const SideBars = ({ closeSide }: { closeSide: (type: string) => void }) => {
         <FaFacebook className="hover:text-purple-700" />
         <FaTwitter className="hover:text-purple-700" />
         <FaInstagram className="hover:text-purple-700" />
-        <FaWhatsapp className="hover:text-purple-700" />
+        <FaGithub className="hover:text-purple-700" />
       </div>
     </section>
   );
