@@ -8,13 +8,7 @@ import {
   FaX,
 } from "react-icons/fa6";
 
-const SideBars = ({
-  closeSide,
-  isOpen,
-}: {
-  closeSide: (type: string) => void;
-  isOpen: boolean;
-}) => {
+const SideBars = ({ closeSide }: { closeSide: (type: string) => void }) => {
   return (
     <section
       className="w-screen fixed  transition-all ease-out duration-1000 left-0 top-0 h-screen z-50 bg-gray-100 py-10 flex flex-col px-4 rounded-md ${

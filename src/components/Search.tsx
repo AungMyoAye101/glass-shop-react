@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Search = () => {
   const [search, setSearch] = useState("");
+  const [open, setOpen] = useState(false);
 
   const [product, setProduct] = useState<CardProp[]>([]);
 
@@ -23,41 +24,47 @@ const Search = () => {
   });
 
   return (
-    <>
-      <div className="flex items-center border border-gray-500 rounded-md shadow-sm overflow-hidden">
-        <input
-          type="text"
-          value={search}
-          placeholder="Search..."
-          onChange={(e) => setSearch(e.target.value)}
-          className="rounded-md p-1   focus:outline-none  flex-1"
-        />
-        <div className="px-2 py-2 bg-yellow-300 h-full">
-          <FaMagnifyingGlass className="text-lg text-gray-400 " />
-        </div>
+    <section className="relative">
+      <div onClick={() => setOpen((pre) => !pre)}>
+        <FaMagnifyingGlass className="text-lg cursor-pointer" />
       </div>
-      {search.length > 0 && (
-        <div className="absolute top-16 flex flex-col  bg-gray-100  rounded-md max-h-screen w-80 overflow-hidden overflow-y-scroll">
-          {filteredProduct.map((item) => (
-            <Link
-              to={`/product/${item.id}`}
-              className="flex items-center gap-2 border border-gray-300 m-1 hover:border-purple-400 rounded-md p-2 "
-              key={item.id}
-              onClick={() => (window.location.href = `/product/${item.id}`)}
-            >
-              <div className="w-10 h-8 bg-gray-100">
-                <img
-                  src={item.image}
-                  alt="product image"
-                  className=" w-full h-full"
-                />
-              </div>
-              <h2 className=" text-sm font-body line-clamp-1">{item.title}</h2>
-            </Link>
-          ))}
+      {open && (
+        <div className=" absolute top-10 -right-2 flex flex-col gap-1 p-2 rounded-md shadow-md w-80 bg-gray-100 ">
+          <div className="flex items-center border border-gray-500 rounded-md shadow-sm">
+            <input
+              type="text"
+              value={search}
+              placeholder="Search..."
+              onChange={(e) => setSearch(e.target.value)}
+              className="rounded-md p-1   focus:outline-none  flex-1"
+            />
+          </div>
+          {search.length > 0 && (
+            <div className=" flex flex-col  bg-gray-100  rounded-md max-h-screen overflow-hidden overflow-y-scroll">
+              {filteredProduct.map((item) => (
+                <Link
+                  to={`/product/${item.id}`}
+                  className="flex items-center gap-2 border border-gray-300 m-1 hover:border-purple-400 rounded-md p-2 "
+                  key={item.id}
+                  onClick={() => (window.location.href = `/product/${item.id}`)}
+                >
+                  <div className="w-12 h-10 bg-gray-100">
+                    <img
+                      src={item.image}
+                      alt="product image"
+                      className=" w-full h-full "
+                    />
+                  </div>
+                  <h2 className=" text-sm font-body line-clamp-1">
+                    {item.title}
+                  </h2>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       )}
-    </>
+    </section>
   );
 };
 

@@ -42,9 +42,7 @@ const NavBar = () => {
           <FaBars />
         </div>
 
-        {toggle.side && (
-          <SideBars closeSide={showToggle} isOpen={toggle.side} />
-        )}
+        {toggle.side && <SideBars closeSide={showToggle} />}
 
         <div className="flex items-center gap-4 ">
           <div>
@@ -67,10 +65,9 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className="flex-1 hidden md:block">
-          <Search />
-        </div>
         <div className="flex items-center gap-4">
+          <Search />
+
           <div
             className="relative cursor-pointer"
             onClick={() => showToggle("cart")}
