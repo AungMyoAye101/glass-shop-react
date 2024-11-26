@@ -15,7 +15,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
   const product = { id, title, image, price, rating };
 
   return (
-    <div className="min-w-20 group bg-gray-100 shadow relative overflow-hidden  hover:shadow-purple-500">
+    <div className="min-w-20 group bg-gray-100 shadow relative overflow-hidden p-2  hover:shadow-purple-500">
       <Link
         to={`/product/${id}`}
         onClick={() => (window.location.href = `/product/${id}`)}
@@ -24,7 +24,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
           <img src={image} alt="model" className="w-full h-full  " />
         </div>
       </Link>
-      <div className=" flex flex-col gap-1 p-2">
+      <div className=" flex flex-col gap-1 py-2">
         <h1 className="font-heading font-semibold text-sm md:text-base line-clamp-1">
           {title}
         </h1>
@@ -37,7 +37,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
         </div>
         <button
           onClick={() => addToCart(product)}
-          className="px-2 py-1 bg-yellow-400 rounded-full hover:bg-purple-400 "
+          className="px-2 py-1.5 bg-orange-400 rounded-full hover:bg-purple-400 "
         >
           Add to cart
         </button>

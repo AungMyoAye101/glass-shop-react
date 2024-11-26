@@ -20,7 +20,7 @@ const Checkout = () => {
 
   const discountPrice = totalCount - totalCount * (discount / 100);
   return (
-    <section className="min-h-screen py-6 px-6 md:px-12 flex flex-col md:flex-row gap-4  items-start ">
+    <section className="min-h-screen py-6 px-6 md:px-12 flex flex-col md:flex-row gap-4 md:gap-8 items-start ">
       <div className="flex flex-col gap-4 bg-gray-100 px-4 py-6 rounded-md shadow-md flex-1  ">
         <h1 className="text-xl font-heading font-semibold">Shopping Cart</h1>
 
@@ -106,7 +106,7 @@ const Checkout = () => {
             </span>
           </div>
           <button
-            className="text-lg  font-heading px-4 py-2 rounded-md shadow-md bg-yellow-400"
+            className="text-lg  font-heading px-4 py-1.5   rounded-md shadow-md bg-orange-400"
             onClick={() => {
               setShowComplete((pre) => !pre);
             }}

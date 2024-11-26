@@ -6,14 +6,15 @@ const ProductDetailSkeleton = () => {
       <Skeleton width={300} height={300} />
       <div className="flex flex-col gap-4">
         <Skeleton width={400} height={20} />
-        <Skeleton width={400} />
+        <Skeleton width={100} height={20} />
+
         <div className="flex gap-4 ">
           <Skeleton width={100} height={20} />
           <Skeleton width={100} height={20} />
         </div>
         <Skeleton width={100} height={20} />
-        <Skeleton width={400} height={80} />
-        <Skeleton width={200} height={40} />
+        <Skeleton width={400} count={5} height={20} />
+        <Skeleton width={200} height={20} />
       </div>
     </section>
   );
