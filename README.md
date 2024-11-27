@@ -53,25 +53,29 @@ Tailwind CSS: Utility-first CSS framework for styling.
 # Installation and Setup
 
 1.Clone the repository:
-<---bash
+
+```bash
 
 git clone https://github.com/your-username/ecommerce-shop-app.git
---->
+```
 
 2.Navigate to the project directory:
-<---bash
+
+```bash
 cd shop
---->
+```
 
 3.Install dependencies:
-<---bash
+
+```bash
 npm install
---->
+```
 
 4.Start the development server:
-<---bash
+
+```bash
 npm run dev
---->
+```
 
 ## Usage
 
