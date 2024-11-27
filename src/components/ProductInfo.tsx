@@ -69,7 +69,7 @@ const ProductInfo = ({ productId }: { productId: string }) => {
             </p>
             <p className="font-body ">{product.description}</p>
             <button
-              className="rounded-md py-1 px-4  font-heading  shadow-md  bg-orange-400 self-start hover:bg-purple-500"
+              className="rounded-md py-1 px-4  font-heading  shadow-md  bg-orange-400 self-start hover:bg-yellow-500"
               onClick={() => addToCart(product)}
             >
               Add to cart

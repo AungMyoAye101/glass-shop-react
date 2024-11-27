@@ -21,7 +21,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
   );
 
   return (
-    <section className=" w-96 h-screen overflow-hidden overflow-y-scroll  z-50 fixed right-0 top-0 rounded-md bg-gray-100 p-4 space-y-4">
+    <section className=" w-[95vw] sm:w-[80vw] md:w-96 h-screen overflow-hidden overflow-y-scroll  z-40 fixed right-0 top-0 rounded-md bg-gray-100 py-4 px-1 space-y-4">
       <button
         onClick={() => clickHandle("cart")}
         className="p-2 rounded-full bg-gray-50 shadow"
@@ -37,7 +37,7 @@ const CartCon: FC<CartProp> = ({ clickHandle }) => {
 
         <div className="flex flex-col gap-2 ">
           {cartItems.map((item) => (
-            <div className="flex gap-2 justify-between items-center bg-gray-100 shadow rounded-md p-2 border hover:border-purple-500">
+            <div className="flex gap-2 justify-between items-center bg-gray-100 shadow rounded-md p-1.5 border hover:border-purple-500">
               <div className="w-16 h-12 bg-gray-300 overflow-hidden rounded-md aspect-square ">
                 <img
                   src={item.image}
