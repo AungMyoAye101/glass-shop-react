@@ -37,7 +37,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
         </div>
         <button
           onClick={() => addToCart(product)}
-          className="px-2 py-1.5 bg-orange-400 rounded-full hover:bg-purple-400 "
+          className="px-2 py-1.5 bg-orange-400 rounded-full hover:bg-yellow-400 "
         >
           Add to cart
         </button>
