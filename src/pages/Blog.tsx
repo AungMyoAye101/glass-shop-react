@@ -1,6 +1,6 @@
 import delivery from "../assets/delivery.jpg";
 import location from "../assets/location.jpg";
-import ImageSlider from "../components/imageSlider";
+import ImageSlider from "../components/ImageSlider";
 
 const blogContent = [
   {

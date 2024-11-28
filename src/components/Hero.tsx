@@ -41,7 +41,7 @@ const Hero = () => {
         {slides.map((item, i) => (
           <section
             key={i}
-            className="w-screen h-[50vh] md:h-screen relative flex-shrink-0 flex items-center justify-center gap-2 md:gap-6 px-4 md:px-12  transition-transform duration-700 ease-out"
+            className="w-screen h-[45vh] md:h-screen relative flex-shrink-0 flex items-center justify-center gap-2 md:gap-6 px-4 md:px-12  transition-transform duration-700 ease-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             <div className="flex flex-col gap-2  md:gap-6  w-[70%] md:w-[50%]">
