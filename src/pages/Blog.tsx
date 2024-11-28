@@ -1,5 +1,6 @@
 import delivery from "../assets/delivery.jpg";
 import location from "../assets/location.jpg";
+import ImageSlider from "../components/imageSlider";
 
 const blogContent = [
   {
@@ -45,6 +46,7 @@ const Blog = () => {
           </div>
         </div>
       ))}
+      <ImageSlider />
     </section>
   );
 };
