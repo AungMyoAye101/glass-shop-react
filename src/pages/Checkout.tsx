@@ -88,13 +88,14 @@ const Checkout = () => {
           <h1 className="text-xl font-semibold font-heading">Summary </h1>
 
           <div className="flex justify-between items-center gap-6">
-            <h2 className="font-medium font-heading">Original Price</h2>
+            <h2 className="font-medium font-heading">Original Price </h2>
             <p className="font-body">{totalCount.toFixed(2)} $</p>
           </div>
           <div className="flex justify-between items-center gap-6">
-            <h2 className=" font-medium font-heading">Discount Price</h2>
+            <h2 className=" font-medium font-heading">Discount % </h2>
             <p className=" font-body">{discount} %</p>
           </div>
+
           <div className="w-full h-[1px] bg-gray-300 "></div>
           <div className="flex justify-between items-center">
             <h3 className="text-lg font-semibold font-heading">
