@@ -1,54 +1,56 @@
 # E-Commerce Shop App
 
+<a href='https://shop-react-iota.vercel.app/' target='_blank' >Preview Deployment </a>
+
 ## Overview
 
 This is a comprehensive e-commerce shop application built with React, Vite, and TypeScript. The app leverages the Fake Store API for product data and includes features such as responsive design, add to cart, search by text, category filtering, and a dynamic discount pricing mechanism at checkout. The UI includes skeleton loading components for a smooth user experience.
 
 ## Features
 
-\*\* Responsive Design: Seamless user experience across all devices.
+* Responsive Design: Seamless user experience across all devices.
 
-\*\* Add to Cart: Easily add products to your cart and manage quantities.
+* Add to Cart: Easily add products to your cart and manage quantities.
 
-\*\* Search by Text: Quickly find products using the search functionality.
+* Search by Text: Quickly find products using the search functionality.
 
-\*\* Category Filtering: Filter products by categories for easier navigation.
+* Category Filtering: Filter products by categories for easier navigation.
 
-\*\* Dynamic Discount Pricing: Enjoy special discounts dynamically applied at checkout.
+* Dynamic Discount Pricing: Enjoy special discounts dynamically applied at checkout.
 
-\*\* Skeleton Loading UI: Provides visual feedback while data is being loaded.
+* Skeleton Loading UI: Provides visual feedback while data is being loaded.
 
-\*\* Order Completion: Display an order completion card upon successful checkout.
+* Order Completion: Display an order completion card upon successful checkout.
 
 ## Pages
 
-\*\* Home: Welcome page with featured products and promotions.
+* Home: Welcome page with featured products and promotions.
 
-\*\* Shop: Browse and explore all available products.
+* Shop: Browse and explore all available products.
 
-\*\* Blog: Stay updated with the latest news and articles.
+* Blog: Stay updated with the latest news and articles.
 
-\*\* Contact Us: Get in touch with our support team.
+* Contact Us: Get in touch with our support team.
 
-\*\* Product Detail: Detailed view of each product with images, descriptions, and reviews.
+* Product Detail: Detailed view of each product with images, descriptions, and reviews.
 
-\*\* Checkout: Review your cart, apply discounts, and complete your purchase.
+* Checkout: Review your cart, apply discounts, and complete your purchase.
 
 ## Technologies Used
 
-React: JavaScript library for building user interfaces.
+* React: JavaScript library for building user interfaces.
 
-Vite: Next-generation front-end tooling.
+* Vite: Next-generation front-end tooling.
 
-TypeScript: Type-safe JavaScript.
+* TypeScript: Type-safe JavaScript.
 
-Fake Store API: External API for fetching product data.
+* Fake Store API: External API for fetching product data.
 
-React Icons: A library of popular icons.
+* React Icons: A library of popular icons.
 
-React Skeleton: UI library for skeleton loading screens.
+* React Skeleton: UI library for skeleton loading screens.
 
-Tailwind CSS: Utility-first CSS framework for styling.
+* Tailwind CSS: Utility-first CSS framework for styling.
 
 # Installation and Setup
 
