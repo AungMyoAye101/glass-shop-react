@@ -6,33 +6,33 @@ This is a comprehensive e-commerce shop application built with React, Vite, and 
 
 ## Features
 
-Responsive Design: Seamless user experience across all devices.
+\*\* Responsive Design: Seamless user experience across all devices.
 
-Add to Cart: Easily add products to your cart and manage quantities.
+\*\* Add to Cart: Easily add products to your cart and manage quantities.
 
-Search by Text: Quickly find products using the search functionality.
+\*\* Search by Text: Quickly find products using the search functionality.
 
-Category Filtering: Filter products by categories for easier navigation.
+\*\* Category Filtering: Filter products by categories for easier navigation.
 
-Dynamic Discount Pricing: Enjoy special discounts dynamically applied at checkout.
+\*\* Dynamic Discount Pricing: Enjoy special discounts dynamically applied at checkout.
 
-Skeleton Loading UI: Provides visual feedback while data is being loaded.
+\*\* Skeleton Loading UI: Provides visual feedback while data is being loaded.
 
-Order Completion: Display an order completion card upon successful checkout.
+\*\* Order Completion: Display an order completion card upon successful checkout.
 
 ## Pages
 
-Home: Welcome page with featured products and promotions.
+\*\* Home: Welcome page with featured products and promotions.
 
-Shop: Browse and explore all available products.
+\*\* Shop: Browse and explore all available products.
 
-Blog: Stay updated with the latest news and articles.
+\*\* Blog: Stay updated with the latest news and articles.
 
-Contact Us: Get in touch with our support team.
+\*\* Contact Us: Get in touch with our support team.
 
-Product Detail: Detailed view of each product with images, descriptions, and reviews.
+\*\* Product Detail: Detailed view of each product with images, descriptions, and reviews.
 
-Checkout: Review your cart, apply discounts, and complete your purchase.
+\*\* Checkout: Review your cart, apply discounts, and complete your purchase.
 
 ## Technologies Used
 
@@ -56,7 +56,7 @@ Tailwind CSS: Utility-first CSS framework for styling.
 
 ```bash
 
-git clone https://github.com/your-username/ecommerce-shop-app.git
+git clone https://github.com/your-username/shop-app.git
 ```
 
 2.Navigate to the project directory:
