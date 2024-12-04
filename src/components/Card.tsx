@@ -24,7 +24,7 @@ const Card = ({ id, title, image, price, rating }: CardProp) => {
           <img src={image} alt="model" className="w-full h-full  " />
         </div>
       </Link>
-      <div className=" flex flex-col gap-1 py-2">
+      <div className=" flex flex-col gap-2 py-2">
         <h1 className="font-heading font-semibold text-sm md:text-base line-clamp-1">
           {title}
         </h1>
